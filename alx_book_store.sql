@@ -38,16 +38,3 @@ CREATE TABLE Order_Details (
     FOREIGN KEY (order_id) REFERENCES Orders (order_id),
     FOREIGN KEY (book_id) REFERENCES Books (book_id)
 );
-
-CREATE TABLE Reviews (
-    review_id INT PRIMARY KEY AUTO_INCREMENT,
-    book_id INT NOT NULL,
-    customer_id INT NOT NULL,
-    rating INT CHECK (
-        rating >= 1
-        AND rating <= 5
-    ),
-    review_text TEXT,
-    FOREIGN KEY (book_id) REFERENCES Books (book_id),
-    FOREIGN KEY (customer_id) REFERENCES Customers (customer_id)
-);
