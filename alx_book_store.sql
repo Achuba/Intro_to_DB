@@ -16,7 +16,7 @@ CREATE TABLE Authors (
     author_name VARCHAR(250) NOT NULL
 );
 
-CREATE TABLE customer (
+CREATE TABLE Customers (
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) NOT NULL UNIQUE,
@@ -27,7 +27,7 @@ CREATE TABLE Orders (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers (customer_id)
 );
 
 CREATE TABLE Order_Details (
