@@ -23,3 +23,10 @@ VALUES (
         'nkamolu@sandtech.com',
         '126 Happiness Ave.'
     );
+
+(
+    5,
+    'Sandra Koffie',
+    'sandra@gmail.com',
+    '127 Happiness Ave.'
+);
